@@ -1,22 +1,36 @@
 /* 
 Address Book App Initialization
 ------------------------------------------------------------------ */
-// Toggles Between App's Different Viewport
+// Some Global Variables
 const appRoot           = document.querySelector('.app-content');
+const contactList       = document.querySelector('.contact-list');
 const appContactForm    = document.querySelector('.app-contact-form');
-const appContactDetails = document.querySelector('.app-contact-details');
 const contactForm       = document.querySelector('.contact-form');
 const previewDiv        = document.querySelector('.preview-div');
+const appContactDetails = document.querySelector('.app-contact-details');
+const contactImage      = document.querySelector('.contact-img img');
+const contactName       = document.querySelector('.contact-name');
+const contactPhone      = document.querySelector('.contact-phone');
+const contactEmail      = document.querySelector('.contact-email');
 
+// Toggles Between App's Different Viewport
 const view = {
   landingPage: function() {
     appRoot.classList.remove('show-contact-form');
     appRoot.classList.remove('show-contact-details');
     appRoot.classList.add('show-landing-page');
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
+    if (contactList.firstChild) {
+      window.scrollTo({
+        top: document.querySelector('.app-user-contacts').offsetTop,
+        behavior: 'smooth'
+      })
+    } else {
+      window.scrollTo({
+        top     : 0,
+        behavior: 'smooth'
+      })
+    }
+    
   },
   contactForm: function() {
     contactForm.firstName.focus();
@@ -43,12 +57,6 @@ const view = {
 };
 
 // Resets the Contents of App Viewports to Default
-const contactList  = document.querySelector('.contact-list');
-const contactImage = document.querySelector('.contact-img img');
-const contactName  = document.querySelector('.contact-name');
-const contactPhone = document.querySelector('.contact-phone');
-const contactEmail = document.querySelector('.contact-email');
-
 const reset = {
   landingPage: function() {
     // code to reset landing page
@@ -147,7 +155,7 @@ function _isNameValid(str) {
 
 // Validate Phone Input
 function _isPhoneValid(str) {
-  const pattern = /(?:\d{2}[-\s]\d{7})|(?:0\d{10})/;
+  const pattern = /(?:\d{2}[-\s]\d{7}\b)|(?:0\d{10}\b)/;
   if (pattern.test(str)) return true;
   return false;
 }
@@ -241,10 +249,6 @@ function _contactFormInit(event) {
       }
     }
     view.contactForm();
-    window.scrollTo({
-      top: document.querySelector('.app-user-contacts').offsetTop,
-      behavior: 'smooth'
-    })
   }
 }
 

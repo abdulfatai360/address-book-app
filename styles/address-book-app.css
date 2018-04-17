@@ -196,7 +196,7 @@ App Landing Page Styles
 }
 .contact-list .contact {
   border: 1px solid rgba(0, 0, 0, 0.20);
-  border-radius: 2px;
+  border-radius: 5px;
   background-color: rgba(107, 199, 221, 0.30);
   margin-bottom: 25px;
   padding: 4px;
@@ -211,7 +211,7 @@ App Landing Page Styles
 }
 .img-thumbnail {
   display: inline-block;
-  width: 25%;
+  max-width: 25%;
   margin-right: 2%;
   padding: 2px;
   border: 1px solid rgba(0, 0, 0, 0.10);
