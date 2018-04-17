@@ -1,0 +1,549 @@
+@import 'font-face-syntax.css';
+/* 
+App General Styles
+----------------------------------------------------------------- */
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background: url('../images/app-bg-sky.jpg');
+  background-size: cover;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+@media (max-width: 424.98px) {
+  html {
+    font-size: 53.13%;
+    font-weight: 400;
+    background: none;
+  }
+  ::-moz-selection {
+    color: #fff;
+    background-color: #3f90fd;
+  }
+  ::selection {
+    color: #fff;
+    background-color: #3f90fd;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+}
+main,
+header,
+section {
+  display: block;
+}
+[hidden],
+template {
+  display: none;
+}
+small {
+  font-size: 80%;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* Anchor Link General Styles */
+a {
+  background-color: transparent;
+}
+a:focus, 
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Image General Styles */
+img {
+  border: 0;
+}
+
+/* App Specific General Styles */
+.app-content {
+  position: relative;
+  width: 100%;
+  max-width: 425px;
+  margin: 0 auto;
+  overflow-y: auto;
+  font-family: 'Roboto Condensed','Segoe UI', Tahoma, Verdana, sans-serif;
+  font-weight: 300;
+  word-spacing: 1px;
+  color: rgba(0, 0, 0, 0.70);
+}
+@media (max-width: 424.98px) {
+  .app-content {
+    font-weight: 400;
+  }
+}
+.app-container {
+  background: #6bc7dd;
+  font-size: 2.1rem;
+  line-height: 1.5;
+  padding: 0 15px;
+  border: 2px solid rgba(0, 0, 0, 0.20);
+}
+.app-container header{
+  margin-bottom: 1em;
+}
+.app-content .app-container h1,
+.app-content .app-container h2,
+.app-content .app-container h3 {
+  color: rgba(0, 0, 0, 0.80);
+  font-family: 'amatic', Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  margin: 0;
+}
+.app-content .app-container h2 {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.20);
+  font-size: 2.2em;
+}
+.app-container .footer p{
+  font-size: 80%;
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* 
+App Landing Page Styles
+------------------------------------------- */
+.app-content .app-landing-page {
+  position: relative;
+  display: none;
+}
+.show-landing-page .app-landing-page {
+  z-index: 1;
+  display: block;
+}
+.app-landing-page .app-header {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.20);
+}
+.app-header .alc-logo {
+  display: inline-block;
+  width: 30%;
+}
+.app-header .alc-logo img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.app-header h1 {
+  display: inline-block;
+  width: 68%;
+  vertical-align: middle;
+  font-size: 2.6em;
+  text-align: right;
+}
+.app-landing-page .app-hero {
+  position: relative;
+  padding: 5px;
+  padding-bottom: 40px;
+  box-shadow: 1px 1px 5px #ee7f6f;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.app-hero .hero-msg {
+  font-family: 'pacifico','Segoe UI', Tahoma, Verdana, sans-serif;
+  font-size: 1.5em;
+}
+.app-hero .add-contact-msg p {
+  font-style: italic;
+  text-align: left;
+  padding-left: 15px;
+  font-weight: 400;
+}
+.add-contact-msg .add-contact-btn {
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 1px;
+  border: 2px solid rgba(0, 0, 0, 0.20);
+  border-radius: 50%;
+  background-image: url('../images/add-contact.png');
+  background-size: cover;
+  background-clip: content-box;
+  cursor: pointer;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.50);
+  transition: 0.2s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.add-contact-msg .add-contact-btn:hover, 
+.add-contact-msg .add-contact-btn:focus {
+  transform: scale(1.2);
+  box-shadow: none;
+}
+.app-user-contacts .contact-list {
+  font-family: 'pacifico', 'Roboto Condensed', Tahoma, sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+.contact-list .contact {
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  border-radius: 2px;
+  background-color: rgba(107, 199, 221, 0.30);
+  margin-bottom: 25px;
+  padding: 4px;
+  cursor: pointer;
+  box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.50);
+  transition: 0.2s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.contact-list .contact:hover, 
+.contact-list .contact:focus {
+  background-color: rgb(107, 199, 221);
+  box-shadow: none;
+}
+.img-thumbnail {
+  display: inline-block;
+  width: 25%;
+  margin-right: 2%;
+  padding: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  border-radius: 2px;
+}
+.contact .img-thumbnail {
+  width: 30%;
+}
+.img-thumbnail img {
+  max-width: 100%;
+  vertical-align: middle;
+  padding: 1px;
+}
+.contact .nameplate {
+  display: inline-block;
+  width: 66%;
+  vertical-align: middle;
+  padding: 2px;
+  padding-left: 2%;
+  letter-spacing: 1px;
+  border-left: 2px solid #ee7f6f;
+}
+.contact .nameplate p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+/* 
+App Contact Addition Form
+--------------------------------------------------------- */
+/* General Form Styling */
+input {
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button,
+input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button,
+html input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button {
+  overflow: visible;
+  text-transform: none;
+}
+
+/* App Specific Form Styling */
+.app-content .app-contact-form {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.show-contact-form .app-contact-form {
+  z-index: 1;
+  display: block;
+}
+.app-contact-form .contact-form-header {
+  position: relative;
+}
+.app-container .close-btn::after {
+  content: '\d7';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(25%, -50%);
+  -moz-transform: translate(25%, -50%);
+  -ms-transform: translate(25%, -50%);
+  -o-transform: translate(25%, -50%);
+  transform: translate(25%, -50%);
+  font-size: 2em;
+  font-weight: 700;
+  cursor: pointer;
+}
+.app-contact-form .contact-form {
+  font-family: 'Roboto Condensed','Segoe UI', Tahoma, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  word-spacing: 1px;
+  letter-spacing: 1.2px;
+  color: rgba(0, 0, 0, 0.70);
+  box-sizing: border-box;
+}
+@media (max-width: 424.98px) {
+  .app-contact-form .contact-form {
+    font-weight: 400;
+  }
+}
+.app-contact-form .form-notify {
+  font-size: 0.8em;
+  font-weight: 400;
+  letter-spacing: 0.50px;
+  color: #dd2C00;
+  background-color: rgba(255, 255, 255, 0.30);
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  border-radius: 2px;
+  padding: 0 10px;
+}
+.app-contact-form .form-notify h3 {
+  font-size: 1.6em;
+}
+.contact-form .field-container {
+  margin: 20px 0;
+}
+.contact-form abbr[title=required] {
+  color: #dd2C00;
+  cursor: help;
+  text-decoration: none;
+  border: none;
+  font-size: 1em;
+}
+.contact-form label {
+  display: inline-block;
+  width: 33%;
+  font-family: 'amatic', 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: right;
+}
+.contact-form input {
+  letter-spacing: 0.5px;
+  width: 65%;
+  padding: 2px 2px;
+  background-color: #6bc7dd;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.20);
+  transition: 0.2s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@media (max-width: 374.98px) {
+  .contact-form label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px
+  }
+  .contact-form input {
+    width: 100%;
+  }
+}
+.contact-form input:focus {
+  border-color: rgba(0, 0, 0, 0.50);
+}
+.contact-form input::-moz-selection {
+  color: #fff;
+  background-color: #3f90fd;
+}
+.contact-form input::selection {
+  color: #fff;
+  background-color: #3f90fd;
+}
+.contact-form :-ms-input-placeholder {
+  font-weight: 300;
+}
+.contact-form ::-webkit-input-placeholder {
+  font-weight: 300;
+}
+.contact-form input.error {
+  border-color: rgba(221, 44, 0, 0.50);
+}
+.contact-form label[for="image"] {
+  width: 40%;
+  border: 2px solid rgba(0, 0, 0, 0.50);
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 5px;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.50);
+  transition: 0.2s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.contact-form label[for="image"]:hover, 
+.contact-form label[for="image"]:focus {
+  color: #6bc7dd;
+  border-color: rgba(0, 0, 0, 0.50);
+  background-color: rgba(0, 0, 0, 0.30);
+  box-shadow: none;
+}
+.contact-form input[type="file"] {
+  opacity: 0;
+  width: 10%;
+}
+.contact-form .preview-div {
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  border-radius: 2px;
+  padding: 4px;
+  font-size: 0.8em;
+  font-weight: 400;
+  letter-spacing: 0.50px;
+}
+.contact-form .img-info {
+  display: inline-block;
+  width: 72%;
+  padding: 2px;
+  padding-left: 2%;
+  vertical-align: middle;
+  border-left: 2px solid rgba(0, 0, 0, 0.20);
+}
+.preview-div p {
+  margin: 0;
+  line-height: 1.2;
+}
+.contact-form button {
+  font-size: 1.1em;
+  border: 2px solid rgba(0, 0, 0, 0.30);
+  background-color: rgb(238, 127, 111);
+  padding: 10px 15px;
+  margin-left: 33%;
+  outline: none;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.50);
+  transition: 0.2s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.contact-form button:hover, 
+.contact-form button:focus {
+  box-shadow: none;
+  background-color: rgba(238, 127, 111, 0.50);
+}
+
+/* 
+App Contact Details
+--------------------------------------------------------- */
+.app-content .app-contact-details {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: none;
+  padding-bottom: 2rem;
+}
+.show-contact-details .app-contact-details {
+  z-index: 1;
+  display: block;
+}
+.app-contact-details .contact-details-header {
+  position: relative;
+}
+.app-contact-details .contact-details {
+  font-family: 'pacifico', 'Roboto Condensed', Tahoma, sans-serif;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.20);
+}
+@media (max-width: 374.98px) {
+  .app-contact-details .contact-details {
+    font-size: 1.1em;
+  }
+}
+.contact-details div {
+  margin-bottom: 20px;
+}
+.contact-details .contact-img {
+  padding: 2%;
+}
+.contact-details .contact-img img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 2px;
+}
+.contact-info p {
+  position: relative;
+  padding: 2%;
+  padding-left: 40px;
+  margin: 0.1em 0;
+  letter-spacing: 1px;
+}
+.contact-info p::before {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  -webkit-transform: translate(0%, -40%);
+  -moz-transform: translate(0%, -40%);
+  -ms-transform: translate(0%, -40%);
+  -o-transform: translate(0%, -40%);
+  transform: translate(0%, -40%);
+}
+.contact-info p:nth-child(1)::before {
+  content: url('../images/user.png');
+}
+.contact-info p:nth-child(2)::before {
+  content: url('../images/phone.png');
+}
+.contact-info p:nth-child(3)::before {
+  content: url('../images/email.png');
+}
+.edit-del .btn {
+  position: relative;
+  border: 2px solid rgba(0, 0, 0, 0.50);
+  padding: 2%;
+  padding-left: 31px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-bottom: 3%;
+  box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.50);
+  transition: 0.2s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.edit-del .btn:hover, 
+.edit-del .btn:focus {
+  box-shadow: none;
+}
+.edit-del .btn::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0%, -40%);
+  -moz-transform: translate(0%, -40%);
+  -ms-transform: translate(0%, -40%);
+  -o-transform: translate(0%, -40%);
+  transform: translate(0%, -40%);
+}
+.edit-del .btn:nth-child(1)::before {
+  content: url('../images/edit-contact.png');
+}
+.edit-del .btn:nth-child(2)::before {
+  content: url('../images/del-contact.png');
+}
+.edit-del .btn:first-child {
+  float: left;
+}
+.edit-del .btn:last-child {
+  float: right;
+}
+.clear-fix {
+  clear: both;
+}

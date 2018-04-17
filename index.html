@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Address Book App | ALC 2.0 Challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles/address-book-app.css" />
+  </head>
+
+  <body>
+    <main class="app-content">
+      <!-- App Landing Page -->
+      <div class="app-landing-page app-container">
+        <header class="app-header">
+          <a href="https://andela.com/" class="alc-logo">
+            <img src="images/alc-logo.png" alt="Andela Learning Community 2.0 inscription, Andela logo, Google logo, and Udacity logo">
+          </a>
+          <h1>Address Book</h1>
+        </header>
+      
+        <section class="app-hero">
+          <p class="hero-msg">Use this App to Save and Keep Track of Your Contacts.</p>
+          <p class="no-contact-msg" id="no-contact-msg">Unfortunately, you do not have a contact yet. Your Contacts&apos; List is empty.</p>
+          <div class="add-contact-msg">
+            <p>Click on the Icon to add a contact.</p>
+            <span class="add-contact-btn" title="Add Contact"></span>
+          </div>
+        </section>
+      
+        <section class="app-user-contacts">
+          <h2>Contacts' List</h2>
+          <ul class="contact-list" id="contact-list"></ul>
+        </section>
+        <hr>
+        <div class="footer" aria-roledescription="footer">
+          <p>This Address Book app was designed and developed by Oluphetty for Google ALC 2.0 Take a Climb Challenge.</p>
+          <small>&copy;2018 Abdulfatai</small>
+        </div>
+      </div>
+      
+      <!-- App Contact Addition Form -->
+      <div class="app-contact-form  app-container">
+        <header class="contact-form-header">
+          <h2>Add New Contact</h2>
+          <span class="close-btn" id="cform-close-btn" title="Close Contact Form"></span>
+        </header>
+        <section class="form-notify">
+          <h3>Form Submission Error(s)</h3>
+          <ul class="error-list"></ul>
+        </section>
+        <form action="#" method="post" enctype="multipart/form-data" class="contact-form" id="contact-form">
+          <input type="hidden" name="contactId" value="0">
+          <div class="field-container">
+            <label for="first-name">First Name<abbr title="required">*</abbr></label>
+            <input type="text" name="firstName" id="first-name" placeholder="John" maxlength="30" title="Name should not contain whitespace, special, and non-word characters.">
+          </div>
+          <div class="field-container">
+            <label for="last-name">Last Name<abbr title="required">*</abbr></label>
+            <input type="text" name="lastName" id="last-name" placeholder="Smith" maxlength="30" title="Name should not contain whitespace, special, and non-word characters.">
+          </div>
+          <div class="field-container">
+            <label for="phone">Phone Number<abbr title="required">*</abbr></label>
+            <input type="tel" name="phone" id="phone" placeholder="01-2345678 or 08012345678" maxlength="11" title="Acceptable Formats: 01-2345678 (Landline) or 08102345678 (Mobile).">
+          </div>
+          <div class="field-container">
+            <label for="email">Email Address<abbr title="required">*</abbr></label>
+            <input type="email" name="email" id="email" placeholder="username@domain.com" maxlength="50">
+          </div>
+          <div class="field-container">
+            <label for="image">Upload Image</label>
+            <input type="file" name="image" id="image" accept="image/jpg, image/jpeg, image/png">
+          </div>
+          <div class="preview-div"></div>
+          <div class="field-container">
+            <button type="submit" id="save-contact-btn">Save Contact</button>
+          </div>
+        </form>
+        <hr>
+        <div class="footer" aria-roledescription="footer">
+          <p>This Address Book app was designed and developed by Oluphetty for Google ALC 2.0 Take a Climb Challenge.</p>
+          <small>&copy;2018 Abdulfatai</small>
+        </div>
+      </div>
+      
+      <!-- App Contact Details -->
+      <div class="app-contact-details  app-container">
+        <header class="contact-details-header">
+          <h2>Contact&apos;s Details</h2>
+          <span class="close-btn" id="cdetails-close-btn" title="Close Contact Details"></span>
+        </header>
+        <section class="contact-details">
+          <div class="contact-img">
+            <img src="" alt="" title="">
+          </div>
+          <div class="contact-info">
+            <p><span class="contact-name"></span></p>
+            <p><span class="contact-phone"></span></p>
+            <p><span class="contact-email"></span></p>
+          </div>
+        </section>
+        <div class="edit-del">
+          <p class="btn edit-contact">Edit Contact</p>
+          <p class="btn del-contact">Delete Contact</p>
+        </div>
+        <div class="clear-fix"></div>
+        <hr>
+        <div class="footer" aria-roledescription="footer">
+          <p>This Address Book app was designed and developed by Oluphetty for Google ALC 2.0 Take a Climb Challenge.</p>
+          <small>&copy;2018 Abdulfatai</small>
+        </div>
+      </div>
+    </main><!-- .app-content -->
+
+    <script async src="scripts/address-book-app.js"></script>
+  </body>
+</html>
