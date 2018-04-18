@@ -1,5 +1,5 @@
 # address-book-app
-This is a project for the ALC 2.0 Take a Climb Challenge. The Andela Learning Community program is a collaborative effort of Andela, Google, and Udacity. This application's features are implemented using native JavaScrip, and it helps to save and keep track of various contacts, their numbers, emails, and, optionally, their images. However, the application does not persist data in any way, so, the app's implementation is focused on frontend
+This is a project for the ALC 2.0 Take a Climb Challenge. The Andela Learning Community program is a collaborative effort of [Andela](https://andela.com), [Google](https://twitter.com/googleafrica), and [Udacity](https://www.udacity.com). This application's features are implemented using native JavaScrip, and it helps to save and keep track of various contacts, their numbers, emails, and, optionally, their images. However, the application does not persist data in any way, so, the app's implementation is focused on frontend
 
 ## Getting Started
 
@@ -19,10 +19,10 @@ This application does not need any special installation procedures than to clone
 * Contact form inputs validations to prevent against blank form submission and unusual (invalid) inputs.
 
 ### Application's Pages Screenshots
-* ![App landing page with empty contact list](screenshots/landing-page-wout-contact.png)
-* ![App contact form for entering contact data](screenshots/contact-form-page.png)
-* ![App landing page with contact list filled with few contacts](screenshots/landing-page-with-contact.png)
-* ![App contact details page showing details of a contact](screenshots/contact-details-page.png)
+![App landing page with empty contact list](screenshots/landing-page-wout-contact.png)
+![App contact form for entering contact data](screenshots/contact-form-page.png)
+![App landing page with contact list filled with few contacts](screenshots/landing-page-with-contact.png)
+![App contact details page showing details of a contact](screenshots/contact-details-page.png)
 
 ## Built With
 * Markup language: HTML5
