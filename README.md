@@ -10,11 +10,19 @@ This is a project for the ALC 2.0 Take a Climb Challenge. The Andela Learning Co
 ### Installation
 This application does not need any special installation procedures than to clone the repo's folders from GitHub, open the files in a text editor or an IDE, and run the code from a web browser.
 
-## Application's Features
+## Usage
+
+### Application's Features
 * Save a contact and display it in a Contacts' List on the app landing page.
 * Click on a contact name to display its details -- name, email, phone number, and image -- on the contact details page.
 * Contact edit and delete functionalities.
 * Contact form inputs validations to prevent against blank form submission and unusual (invalid) inputs.
+
+### Application's Pages Screenshots
+* ![App landing page with empty contact list](screenshots/landing-page-wout-contact.png)
+* ![App contact form for entering contact data](screenshots/contact-form-page.png)
+* ![App landing page with contact list filled with few contacts](screenshots/landing-page-with-contact.png)
+* ![App contact details page showing details of a contact](screenshots/contact-details-page.png)
 
 ## Built With
 * Markup language: HTML5
